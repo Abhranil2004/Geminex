@@ -1,0 +1,7 @@
+{
+  "/api/create-guest/route": "app/api/create-guest/route.js",
+  "/api/rate-limits/route": "app/api/rate-limits/route.js",
+  "/auth/page": "app/auth/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/page": "app/page.js"
+}
