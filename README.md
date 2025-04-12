@@ -20,7 +20,7 @@
 
 ## ⚙️ Installation
 
-Follow the steps in [INSTALL.md](./INSTALL.md) to set up and run Geminex locally or on your own server.
+Follow the steps in [INSTALL.md](https://github.com/Abhranil2004/Geminex/blob/general/Install.md) to set up and run Geminex locally or on your own server.
 
 ---
 
