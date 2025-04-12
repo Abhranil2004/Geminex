@@ -1,6 +1,6 @@
 # ⚙️ Geminex Installation Guide
 
-Geminex is a sleek, open-source AI chat platform with powerful multi-model support. This guide walks you through the installation process for various platforms, including local development and Docker deployment.
+**Geminex** is a sleek, open-source AI chat platform with powerful multi-model support. This guide walks you through the installation process for various platforms, including local development and Docker deployment.
 
 ![Geminex Screenshot](https://github.com/Abhranil2004/Geminex/blob/general/public/Geminex.png)
 
@@ -10,10 +10,10 @@ Geminex is a sleek, open-source AI chat platform with powerful multi-model suppo
 
 Make sure you have the following installed before getting started:
 
-- Node.js 18.x or later
-- npm or yarn
-- Git
-- Supabase account (for authentication and storage)
+- Node.js 18.x or later  
+- npm or yarn  
+- Git  
+- Supabase account (for authentication and storage)  
 - API keys for AI models (OpenAI, Mistral, etc.)
 
 ---
@@ -43,14 +43,14 @@ CSRF_SECRET=your_csrf_secret_key
 
 ### 🔐 Generating a CSRF Secret
 
-To secure your app from CSRF attacks, you need a strong secret. Generate one using any of the following:
+To secure your app from CSRF attacks, generate a strong secret using one of the following:
 
 #### 🟢 Node.js
 ```bash
 node -e "console.log(require('crypto').randomBytes(32).toString('hex'))"
 ```
 
-#### 🔵 OpenSSL
+#### 🔹 OpenSSL
 ```bash
 openssl rand -hex 32
 ```
@@ -60,35 +60,23 @@ openssl rand -hex 32
 python -c "import secrets; print(secrets.token_hex(32))"
 ```
 
-Add the generated string to your `.env.local` under `CSRF_SECRET`.
+Paste the generated value under `CSRF_SECRET` in `.env.local`.
 
 ---
 
 ## 🖥️ Local Installation
 
-### macOS / Linux
+### macOS / Linux / Windows
+
 ```bash
 # Clone the Geminex repo
-git clone https://github.com/ibelick/zola.git
-cd zola
+git clone https://github.com/Abhranil2004/Geminex.git
+cd Geminex
 
 # Install dependencies
 npm install
 
 # Run the app
-npm run dev
-```
-
-### 🪟 Windows
-```bash
-# Clone the Geminex repo
-git clone https://github.com/ibelick/zola.git
-cd zola
-
-# Install dependencies
-npm install
-
-# Start development server
 npm run dev
 ```
 
@@ -100,12 +88,12 @@ Once up and running, Geminex will be available at: [http://localhost:3000](http:
 
 The easiest way to deploy **Geminex** is via [Vercel](https://vercel.com):
 
-1. Push your code to a Git repository (GitHub, GitLab, etc.)
-2. Import the project into Vercel
-3. Configure your environment variables
-4. Deploy with a click!
+1. Push your code to GitHub (or any Git provider)  
+2. Import the repo into Vercel  
+3. Add your environment variables  
+4. Deploy with one click!
 
-Or use the CLI:
+Or use the Vercel CLI:
 
 ```bash
 # Install Vercel CLI
@@ -119,7 +107,7 @@ vercel
 
 ## 🏗️ Self-Hosted Production
 
-If you prefer self-hosting:
+Prefer running Geminex yourself?
 
 ```bash
 # Build the application
@@ -133,28 +121,28 @@ npm start
 
 ## ⚙️ Configuration Options
 
-You can fine-tune Geminex by editing the following files:
+Fine-tune Geminex by editing:
 
-- `app/lib/config.ts`: Configure models, daily limits, UI behavior
-- `.env.local`: API keys and secrets
+- `app/lib/config.ts`: Control models, limits, UI settings  
+- `.env.local`: Store your API keys and secrets
 
 ---
 
-## 🛠️ Troubleshooting
+## 💪 Troubleshooting
 
 ### Common Issues & Fixes
 
 1. **🔗 Supabase Connection Errors**
-   - Double-check Supabase URL and API keys
-   - Ensure IP access rules in Supabase settings
+   - Double-check your Supabase URL and keys
+   - Ensure IP permissions are correctly configured in Supabase
 
-2. **🤖 Model Not Responding**
-   - Check API keys for OpenAI or Mistral
-   - Make sure the models in config are available in your plan
+2. **🤖 AI Model Not Responding**
+   - Verify API keys for OpenAI or Mistral
+   - Confirm selected models are available under your current plan
 
 3. **🐳 Docker Container Crashing**
-   - Inspect with `docker logs <container_id>`
-   - Verify that all required environment variables are defined
+   - Use `docker logs <container_id>` to debug
+   - Ensure all required environment variables are defined
 
 ---
 
@@ -172,4 +160,6 @@ Licensed under the **Apache License 2.0** — use it, remix it, improve it!
 ---
 
 Start building smarter conversations with **Geminex**. ✨
+
+
 
